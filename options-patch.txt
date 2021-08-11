@@ -1,0 +1,13 @@
+--- options.rb	2021-08-10 19:12:36.000000000 -0700
++++ options.rb.patch	2021-08-10 19:07:53.000000000 -0700
+@@ -162,8 +162,8 @@
+       @attribute_options ||= {}
+     end
+ 
+-    def self.memoized(key)
+-      memoized_attributes[key.to_sym] = Proc.new
++    def self.memoized(key, &block)
++      memoized_attributes[key.to_sym] = block
+       class_eval <<-RUBY, __FILE__, __LINE__ + 1
+         def #{key}() self[:#{key}]; end
+       RUBY
