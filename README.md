@@ -8,7 +8,7 @@ export GEM_INSTALL_PATH=~/.rvm/gems/ruby-2.7.1/gems
 ```sh
 cp response_middleware.rb.patch $GEM_INSTALL_PATH/faraday_middleware-0.12.2/lib/faraday_middleware/
 
-$ cp options.rb.patch $GEM_INSTALL_PATH/faraday-0.15.4/lib/faraday/
+cp options.rb.patch $GEM_INSTALL_PATH/faraday-0.15.4/lib/faraday/
 ```
 
 * Then, apply the patches
